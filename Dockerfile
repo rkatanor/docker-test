@@ -1,6 +1,8 @@
 FROM java:8-jdk-alpine
 
-COPY ./target/spring-docker-test-0.0.1-SNAPSHOT.jar
+COPY ./target/spring-docker-test-0.0.1-SNAPSHOT.jar /usr/app/
+
+WORKDIR /usr/app
 
 RUN sh -c 'touch spring-docker-test-0.0.1-SNAPSHOT.jar'
 
